@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>減碳實戰方案</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="action-plan">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>咖啡廳減碳實戰方案</h2>
+      <p>從最容易開始的地方做起，才容易持續</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal"><h3>採購面</h3><p>優先挑選較穩定、運輸路徑明確的供應來源，減少不必要的配送頻率，並評估在地或區域型供應。</p></div>
+      <div class="card reveal"><h3>設備面</h3><p>定期保養咖啡機、冰箱與冷氣，避免效率下降造成耗電上升。尖峰時段也可調整不必要的待機設備。</p></div>
+      <div class="card reveal"><h3>包裝面</h3><p>減少一次性包材，鼓勵自備杯、重新思考外帶包裝層數，都是很有感的改善方向。</p></div>
+    </div>
+
+    <div class="card reveal">
+      <div class="section-title">
+        <h2>互動挑戰 3：減碳選擇題</h2>
+        <p>站在管理者角度，選出更適合的經營做法</p>
+      </div>
+      <div id="quizBox">
+        <div id="quizQuestion"></div>
+        <div id="quizOptions"></div>
+        <div id="quizFeedback" class="feedback"></div>
+        <div style="margin-top:14px">
+          <span class="score-chip">目前分數：<span id="quizScore">0</span></span>
+        </div>
+      </div>
+      <!-- 結算總結區塊 (初始隱藏) -->
+      <div id="quizSummaryCard" style="display: none; margin-top: 16px;">
+        <h3>📊 實戰方案測驗總結</h3>
+        <div id="quizSummaryContent"></div>
+        <button class="btn btn-secondary" onclick="initQuiz(true)" style="margin-top: 24px;">重新挑戰</button>
+      </div>
+    </div>
+
+      <div class="hero-actions" id="nextLevelAction" style="display: none;">
+      <a class="btn btn-primary" href="checklist.html">下一頁：行動清單</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用chatGPT工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

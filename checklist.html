@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>行動清單挑戰</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checklist">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>單元 5：行動清單挑戰</h2>
+      <p>請閱讀題目內容判斷是否是有助於咖啡廳減碳的做法</p>
+    </div>
+
+    <!-- 測驗進行區塊 -->
+    <div class="card reveal" id="checklistCard">
+      <h3>行動檢核：這個做法好嗎？</h3>
+      <div id="checklistQBox"></div>
+      <div id="checklistOptions" class="choice-list" style="margin-top: 16px;"></div>
+      <div id="checklistFeedback" class="feedback" style="display: none; margin-top: 16px;"></div>
+    </div>
+
+    <!-- 結算總結區塊 (初始隱藏) -->
+    <div class="card reveal" id="checklistSummaryCard" style="display: none;">
+      <h3>📊 經營測驗總結</h3>
+      <div id="checklistSummaryContent"></div>
+      <button class="btn btn-primary" onclick="initChecklist(true)" style="margin-top: 24px;">重新挑戰</button>
+    </div>
+
+    <div class="hero-actions" id="nextLevelAction" style="display: none;">
+      <a class="btn btn-secondary" href="about.html">前往教材介紹</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用 chatGPT 工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

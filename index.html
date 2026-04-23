@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>從種子到杯中，減碳在手中</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="badge">咖啡廳碳排認知與減碳行動教學平台</span>
+        <h1>從種子到杯中，<br>減碳在手中</h1>
+        <p>這是一個給咖啡廳管理層使用的互動式教學網站，帶你從咖啡豆的來源、運輸、製作到銷售，逐步看見碳排熱點，並找到可執行的減碳方法。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="why-carbon.html">開始學習</a>
+          <a class="btn btn-secondary" href="#question-start">先看互動引導</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto" style="border-radius: 16px; overflow: hidden; background: #fff5e6; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          <defs>
+            <!-- 牆面漸層 -->
+            <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fff0d9"/>
+              <stop offset="100%" stop-color="#f5dfc6"/>
+            </linearGradient>
+
+            <!-- 木質地板紋理 -->
+            <pattern id="woodFloor" width="160" height="40" patternUnits="userSpaceOnUse">
+              <rect width="160" height="40" fill="#d0a781"/>
+              <line x1="0" y1="0" x2="160" y2="0" stroke="#ab7b50" stroke-width="1.5"/>
+              <line x1="0" y1="20" x2="160" y2="20" stroke="#ab7b50" stroke-width="1.5"/>
+              <line x1="60" y1="0" x2="60" y2="20" stroke="#ab7b50" stroke-width="1.5"/>
+              <line x1="120" y1="20" x2="120" y2="40" stroke="#ab7b50" stroke-width="1.5"/>
+              <path d="M10,8 Q30,12 50,8 T90,8" fill="none" stroke="#ab7b50" stroke-width="1" opacity="0.5"/>
+              <path d="M70,28 Q90,32 110,28 T150,28" fill="none" stroke="#ab7b50" stroke-width="1" opacity="0.5"/>
+            </pattern>
+
+            <!-- 實木吧台紋理 -->
+            <pattern id="counterWood" width="80" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(5)">
+              <rect width="80" height="30" fill="#6d4c41"/>
+              <path d="M0,10 Q20,15 40,10 T80,10" fill="none" stroke="#4e342e" stroke-width="1"/>
+              <path d="M0,20 Q20,25 40,20 T80,20" fill="none" stroke="#4e342e" stroke-width="1"/>
+            </pattern>
+
+            <!-- 薄荷藍冰箱漸層 -->
+            <linearGradient id="fridgeGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#a8e6cf"/>
+              <stop offset="60%" stop-color="#dcedc1"/>
+              <stop offset="100%" stop-color="#a8e6cf"/>
+            </linearGradient>
+
+            <!-- 金屬漸層 (咖啡機、冰箱手把) -->
+            <linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f5f5f5"/>
+              <stop offset="50%" stop-color="#bdbdbd"/>
+              <stop offset="100%" stop-color="#757575"/>
+            </linearGradient>
+
+            <!-- 溫暖燈光發光濾鏡 -->
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+
+            <!-- 柔和陰影濾鏡 -->
+            <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#5c4033" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- 背景牆面 -->
+          <rect x="0" y="0" width="800" height="380" fill="url(#wallGrad)"/>
+
+          <!-- 底部木地板 -->
+          <rect x="0" y="380" width="800" height="120" fill="url(#woodFloor)"/>
+
+          <!-- 環境氛圍暖光 -->
+          <ellipse cx="400" cy="0" rx="400" ry="300" fill="#ffeb3b" opacity="0.05" pointer-events="none"/>
+
+          <!-- 吧台櫃檯 (左側棕色區塊) -->
+          <g filter="url(#shadow)">
+            <rect x="40" y="260" width="380" height="140" rx="6" fill="url(#counterWood)"/>
+            <!-- 吧台桌面 -->
+            <rect x="30" y="245" width="400" height="15" rx="4" fill="#bcaaa4"/>
+            <rect x="30" y="260" width="400" height="5" fill="#8d6e63"/>
+          </g>
+
+          <!-- 疊放的紙杯 (原吧台白色橢圓) -->
+          <g transform="translate(100, 245)" filter="url(#shadow)">
+            <!-- 第一疊 -->
+            <path d="M0,0 L-10,-40 L25,-40 L15,0 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+            <!-- 防燙杯套 -->
+            <path d="M-5,-15 L-8,-30 L23,-30 L20,-15 Z" fill="#a1887f"/>
+            <!-- 杯蓋 -->
+            <ellipse cx="7.5" cy="-40" rx="18" ry="5" fill="#616161"/>
+            <rect x="-10.5" y="-43" width="36" height="3" rx="1.5" fill="#424242"/>
+
+            <!-- 第二疊 -->
+            <g transform="translate(40, 10)">
+              <path d="M0,0 L-10,-40 L25,-40 L15,0 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+              <path d="M-5,-15 L-8,-30 L23,-30 L20,-15 Z" fill="#a1887f"/>
+              <ellipse cx="7.5" cy="-40" rx="18" ry="5" fill="#616161"/>
+              <rect x="-10.5" y="-43" width="36" height="3" rx="1.5" fill="#424242"/>
+            </g>
+            <!-- 傾斜放置的杯子 -->
+            <g transform="translate(90, 0) rotate(15)">
+              <path d="M0,0 L-10,-40 L25,-40 L15,0 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+              <path d="M-5,-15 L-8,-30 L23,-30 L20,-15 Z" fill="#a1887f"/>
+              <ellipse cx="7.5" cy="-40" rx="18" ry="5" fill="#616161"/>
+              <rect x="-10.5" y="-43" width="36" height="3" rx="1.5" fill="#424242"/>
+            </g>
+          </g>
+
+          <!-- 專業義式咖啡機 (原右側深灰色方塊) -->
+          <g transform="translate(240, 135)" filter="url(#shadow)">
+            <!-- 機身後座 -->
+            <rect x="0" y="0" width="160" height="110" rx="8" fill="#424242"/>
+            <!-- 金屬前面板 -->
+            <rect x="10" y="10" width="140" height="90" rx="4" fill="url(#metalGrad)"/>
+            <!-- 頂部溫杯區 -->
+            <rect x="10" y="0" width="140" height="5" fill="#9e9e9e"/>
+            <line x1="20" y1="0" x2="20" y2="-10" stroke="#bdbdbd" stroke-width="2"/>
+            <line x1="140" y1="0" x2="140" y2="-10" stroke="#bdbdbd" stroke-width="2"/>
+            <line x1="20" y1="-10" x2="140" y2="-10" stroke="#bdbdbd" stroke-width="2"/>
+            <!-- 沖煮頭 -->
+            <rect x="40" y="70" width="20" height="20" fill="#212121"/>
+            <rect x="100" y="70" width="20" height="20" fill="#212121"/>
+            <!-- 沖煮把手 (Portafilters) -->
+            <path d="M50,90 Q50,110 30,120" fill="none" stroke="#212121" stroke-width="6" stroke-linecap="round"/>
+            <path d="M110,90 Q110,110 90,120" fill="none" stroke="#212121" stroke-width="6" stroke-linecap="round"/>
+            <!-- 蒸氣棒 -->
+            <path d="M130,50 Q150,60 140,90" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round"/>
+            <!-- 玻璃壓力錶 -->
+            <circle cx="80" cy="40" r="14" fill="#ffffff" stroke="#757575" stroke-width="2"/>
+            <circle cx="80" cy="40" r="10" fill="#eceff1"/>
+            <line x1="80" y1="40" x2="85" y2="33" stroke="#d32f2f" stroke-width="2" stroke-linecap="round"/>
+            <!-- 控制按鈕 -->
+            <circle cx="30" cy="30" r="4" fill="#f44336"/>
+            <circle cx="45" cy="30" r="4" fill="#4caf50"/>
+            <!-- 接水盤 -->
+            <rect x="0" y="105" width="160" height="10" rx="2" fill="#212121"/>
+          </g>
+
+          <!-- 復古 Smeg 風格冰箱 (原淺藍色長方塊) -->
+          <g transform="translate(480, 90)" filter="url(#shadow)">
+            <!-- 冰箱主體 -->
+            <rect x="0" y="0" width="130" height="310" rx="25" fill="url(#fridgeGrad)"/>
+            <!-- 3D 邊緣反光 -->
+            <rect x="5" y="5" width="120" height="300" rx="20" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+            <!-- 上下門分隔線 -->
+            <line x1="0" y1="90" x2="130" y2="90" stroke="#8bc34a" stroke-width="2" opacity="0.5"/>
+            
+            <!-- 金屬手把 -->
+            <rect x="15" y="30" width="8" height="40" rx="4" fill="url(#metalGrad)" filter="url(#shadow)"/>
+            <rect x="15" y="110" width="8" height="70" rx="4" fill="url(#metalGrad)" filter="url(#shadow)"/>
+            
+            <!-- 復古標誌金屬牌 -->
+            <rect x="45" y="15" width="40" height="12" rx="6" fill="url(#metalGrad)"/>
+            
+            <!-- 可愛咖啡貼紙 -->
+            <g transform="translate(80, 140) rotate(-10)">
+              <circle cx="0" cy="0" r="15" fill="#ffffff" filter="url(#shadow)"/>
+              <path d="M-6,-4 L6,-4 L4,6 L-4,6 Z" fill="#6d4c41"/>
+              <path d="M6,-4 Q10,1 6,4" fill="none" stroke="#4e342e" stroke-width="1.5"/>
+            </g>
+            <g transform="translate(60, 200) rotate(20)">
+              <ellipse cx="0" cy="0" rx="12" ry="16" fill="#8d6e63" filter="url(#shadow)"/>
+              <path d="M-3,-12 Q6,0 -3,12" fill="none" stroke="#3e2723" stroke-width="1.5"/>
+            </g>
+            <g transform="translate(90, 240) rotate(35)">
+              <path d="M0,0 Q12,-12 16,0 Q12,12 0,0 Z" fill="#81c784" stroke="#ffffff" stroke-width="1.5" filter="url(#shadow)"/>
+            </g>
+          </g>
+
+          <!-- 綠色垃圾分類箱 (原綠色圓角方塊) -->
+          <g transform="translate(650, 280)" filter="url(#shadow)">
+            <!-- 桶身 -->
+            <path d="M10,0 L70,0 L80,120 L0,120 Z" fill="#4caf50"/>
+            <path d="M0,0 L80,0 L78,15 L2,15 Z" fill="#388e3c"/>
+            <!-- 桶蓋 -->
+            <rect x="-5" y="-10" width="90" height="10" rx="3" fill="#2e7d32"/>
+            
+            <!-- 回收標誌 (Recycle Logo) -->
+            <g transform="translate(40, 50) scale(0.5)">
+              <path d="M0,-25 L20,10 L-20,10 Z" fill="none" stroke="#c8e6c9" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M-20,10 L0,45 L20,10" fill="none" stroke="#c8e6c9" stroke-width="6" stroke-linejoin="round"/>
+            </g>
+          </g>
+
+          <!-- 懸掛式木質小告示牌 (原文字對話框) -->
+          <g transform="translate(400, 0)">
+            <!-- 懸掛繩索/鐵鍊 -->
+            <line x1="-80" y1="0" x2="-80" y2="40" stroke="#5d4037" stroke-width="3"/>
+            <line x1="80" y1="0" x2="80" y2="40" stroke="#5d4037" stroke-width="3"/>
+            <g filter="url(#shadow)">
+              <!-- 木板底座 -->
+              <rect x="-120" y="40" width="240" height="60" rx="8" fill="url(#counterWood)"/>
+              <!-- 紙質/羊皮紙內襯 -->
+              <rect x="-110" y="48" width="220" height="44" rx="4" fill="#fff8e1"/>
+              <!-- 手寫風格文字 -->
+              <text x="0" y="78" font-family="'Brush Script MT', 'Comic Sans MS', cursive, sans-serif" font-size="24" font-weight="bold" fill="#4e342e" text-anchor="middle">Green Bean Café</text>
+            </g>
+          </g>
+
+          <!-- 溫暖吊燈 (原頂部黃色圓點) -->
+          <!-- 左吊燈 -->
+          <g transform="translate(140, 0)">
+            <!-- 電線與天花板底座 -->
+            <line x1="0" y1="0" x2="0" y2="100" stroke="#424242" stroke-width="2"/>
+            <circle cx="0" cy="0" r="10" fill="#424242"/>
+            <!-- 燈罩 -->
+            <path d="M-20,100 L20,100 L30,120 L-30,120 Z" fill="#424242"/>
+            <!-- 溫暖燈泡與光暈 -->
+            <circle cx="0" cy="125" r="12" fill="#ffca28" filter="url(#glow)"/>
+            <circle cx="0" cy="125" r="6" fill="#fff9c4"/>
+          </g>
+
+          <!-- 右吊燈 -->
+          <g transform="translate(680, 0)">
+            <line x1="0" y1="0" x2="0" y2="70" stroke="#424242" stroke-width="2"/>
+            <circle cx="0" cy="0" r="10" fill="#424242"/>
+            <path d="M-20,70 L20,70 L30,90 L-30,90 Z" fill="#424242"/>
+            <circle cx="0" cy="95" r="12" fill="#ffca28" filter="url(#glow)"/>
+            <circle cx="0" cy="95" r="6" fill="#fff9c4"/>
+          </g>
+
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="question-start">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>先來一個問題，開始今天的學習</h2>
+        <p>用一個小互動勾起好奇心</p>
+      </div>
+      <div class="card reveal">
+        <h3>你知道咖啡廳為什麼需要減碳嗎？</h3>
+        <p>請先選一個你覺得最接近的答案，看看你的直覺是否正確。</p>
+        <div class="choice-list">
+          <button class="choice-btn" onclick="homeQuestion('a')">A. 因為只有大型工廠才會排碳，咖啡廳其實影響很小</button>
+          <button class="choice-btn" onclick="homeQuestion('b')">B. 因為咖啡廳從原料、運輸、設備用電到包裝，都會產生碳排</button>
+          <button class="choice-btn" onclick="homeQuestion('c')">C. 因為減碳只是流行口號，和日常經營沒有什麼關係</button>
+        </div>
+        <div id="homeFeedback" class="feedback"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>你會學到什麼？</h2>
+        <p>把複雜的永續概念，拆成管理者能直接用的內容</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="icon-bubble">☕</div>
+          <h3>看見碳排來源</h3>
+          <p>從原料取得、運輸、製作、冷藏設備到外帶包裝，快速辨識咖啡廳常見的碳排熱點。</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon-bubble">🌿</div>
+          <h3>理解減碳邏輯</h3>
+          <p>用白話方式認識什麼是碳排、為什麼營運行為會影響環境，以及店家為何需要開始重視。</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon-bubble">📋</div>
+          <h3>規劃實戰行動</h3>
+          <p>把減碳變成可以落地的小步驟，例如採購、包裝、用電與營運調整，讓永續不再只是口號。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>學習地圖</h2>
+        <p>依序完成內容頁與互動挑戰</p>
+      </div>
+      <div class="grid-2">
+        <a class="card module-link reveal" href="why-carbon.html"><div><h3>01 為什麼咖啡廳要減碳</h3><p>理解減碳與品牌、成本、經營的關係</p></div><span>→</span></a>
+        <a class="card module-link reveal" href="carbon-elements.html"><div><h3>02 從種子到杯中的碳排元素</h3><p>找出營運流程中的碳排熱點</p></div><span>→</span></a>
+        <a class="card module-link reveal" href="carbon-basics.html"><div><h3>03 搞懂你的碳息</h3><p>用白話認識碳排基礎知識</p></div><span>→</span></a>
+        <a class="card module-link reveal" href="action-plan.html"><div><h3>04 咖啡廳減碳實戰方案</h3><p>學習更實際的經營調整策略</p></div><span>→</span></a>
+        <a class="card module-link reveal" href="checklist.html"><div><h3>05 減碳清單行動</h3><p>把想法轉成行動與完成狀態</p></div><span>→</span></a>
+        <a class="card module-link reveal" href="about.html"><div><h3>06 教材介紹</h3><p>查看目標、動機與參考資料</p></div><span>→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用chatGPT工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>基礎碳排知識</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="carbon-basics">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>搞懂你的碳息：基礎碳排知識</h2>
+      <p>先用白話文理解，再做分類挑戰</p>
+    </div>
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3>什麼是碳排？</h3>
+        <p>簡單來說，就是人類活動在生產、運輸、用電、燃料消耗等過程中，排放到大氣中的溫室氣體量。平常大家常把它簡化叫做「碳排」。</p>
+      </div>
+      <div class="card reveal">
+        <h3>為什麼咖啡廳也要懂？</h3>
+        <p>因為咖啡廳的營運會用到許多設備與原物料，這些看似日常的小事，如果長期累積，就會形成可觀的碳排足跡。</p>
+      </div>
+      <div class="card reveal">
+        <h3>減碳不是只靠一件大事</h3>
+        <p>比起一次做很大的改造，很多時候是透過小改變堆疊成果，例如減少浪費、選擇更有效率的設備、優化外帶包裝與配送方式。</p>
+      </div>
+      <div class="card reveal">
+        <h3>看懂分類，才容易找對改善方向</h3>
+        <p>把碳排來源分成原料、運輸、製作、銷售，有助於管理者更快知道問題出在哪裡，也更容易規劃行動。</p>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="section-title">
+        <h2>互動挑戰 2：分類挑戰</h2>
+        <p>把項目拖到正確分類裡</p>
+      </div>
+      <div class="game-panel">
+        <div>
+          <div class="draggable-list">
+            <div class="draggable" draggable="true" data-type="原料">咖啡豆採購</div>
+            <div class="draggable" draggable="true" data-type="運輸">原料配送車</div>
+            <div class="draggable" draggable="true" data-type="製作">咖啡機用電</div>
+            <div class="draggable" draggable="true" data-type="銷售">外帶杯與杯蓋</div>
+            <div class="draggable" draggable="true" data-type="製作">冷氣與照明</div>
+            <div class="draggable" draggable="true" data-type="運輸">跨區物流配送</div>
+          </div>
+        </div>
+        <div class="dropzones">
+          <div class="dropzone" data-zone="原料"><h4>原料</h4></div>
+          <div class="dropzone" data-zone="運輸"><h4>運輸</h4></div>
+          <div class="dropzone" data-zone="製作"><h4>製作</h4></div>
+          <div class="dropzone" data-zone="銷售"><h4>銷售</h4></div>
+        </div>
+      </div>
+      <div style="height:12px"></div>
+      <button class="btn btn-primary" onclick="checkClassification()">檢查答案</button>
+      <button class="btn btn-secondary" onclick="resetClassification()">重做</button>
+      <div id="classificationFeedback" class="feedback"></div>
+    </div>
+
+      <div class="hero-actions" id="nextLevelAction" style="display: none;">
+      <a class="btn btn-primary" href="action-plan.html">下一頁：實戰方案</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用chatGPT工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

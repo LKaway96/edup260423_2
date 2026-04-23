@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>碳排元素</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="carbon-elements">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>從種子到杯中：咖啡廳的碳排元素</h2>
+      <p>先看內容，再玩第一個互動挑戰</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3>原料</h3>
+        <p>咖啡豆、牛奶、糖漿、甜點原料等，在種植、生產與包裝時都可能帶來碳排。</p>
+      </div>
+      <div class="card reveal">
+        <h3>運輸</h3>
+        <p>原料從產地到供應商，再從供應商到門市，距離越長、次數越多，通常碳排也越高。</p>
+      </div>
+      <div class="card reveal">
+        <h3>製作</h3>
+        <p>咖啡機、冰箱、製冰機、冷氣、照明等都是日常高頻率耗能設備。</p>
+      </div>
+      <div class="card reveal">
+        <h3>銷售與包裝</h3>
+        <p>外帶杯、杯蓋、吸管、紙袋、外送包材，都是顧客看得見、也很容易累積的碳排來源。</p>
+      </div>
+      <div class="card reveal">
+        <h3>間接碳排</h3>
+        <p>除了店內設備與包材，像是員工通勤、外送配送、顧客交通方式等，也屬於容易被忽略的間接碳排來源。</p>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="section-title">
+        <h2>互動挑戰 1：找碳排</h2>
+        <p>在咖啡廳場景中找出 6 個主要碳排來源</p>
+      </div>
+
+      <div class="game-panel">
+        <div class="scene-game" id="sceneGame" style="position: relative; background: none; border: none; padding: 0;">
+          <!-- 替換為與首頁相同的精緻 SVG 向量場景 -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="auto" style="border-radius: 16px; overflow: hidden; background: #fff5e6; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <defs>
+              <linearGradient id="wallGradGame" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#fff0d9"/>
+                <stop offset="100%" stop-color="#f5dfc6"/>
+              </linearGradient>
+              <pattern id="woodFloorGame" width="160" height="40" patternUnits="userSpaceOnUse">
+                <rect width="160" height="40" fill="#d0a781"/>
+                <line x1="0" y1="0" x2="160" y2="0" stroke="#ab7b50" stroke-width="1.5"/>
+                <line x1="0" y1="20" x2="160" y2="20" stroke="#ab7b50" stroke-width="1.5"/>
+                <line x1="60" y1="0" x2="60" y2="20" stroke="#ab7b50" stroke-width="1.5"/>
+                <line x1="120" y1="20" x2="120" y2="40" stroke="#ab7b50" stroke-width="1.5"/>
+                <path d="M10,8 Q30,12 50,8 T90,8" fill="none" stroke="#ab7b50" stroke-width="1" opacity="0.5"/>
+                <path d="M70,28 Q90,32 110,28 T150,28" fill="none" stroke="#ab7b50" stroke-width="1" opacity="0.5"/>
+              </pattern>
+              <pattern id="counterWoodGame" width="80" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(5)">
+                <rect width="80" height="30" fill="#6d4c41"/>
+                <path d="M0,10 Q20,15 40,10 T80,10" fill="none" stroke="#4e342e" stroke-width="1"/>
+                <path d="M0,20 Q20,25 40,20 T80,20" fill="none" stroke="#4e342e" stroke-width="1"/>
+              </pattern>
+              <linearGradient id="fridgeGradGame" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#a8e6cf"/>
+                <stop offset="60%" stop-color="#dcedc1"/>
+                <stop offset="100%" stop-color="#a8e6cf"/>
+              </linearGradient>
+              <linearGradient id="metalGradGame" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f5f5f5"/>
+                <stop offset="50%" stop-color="#bdbdbd"/>
+                <stop offset="100%" stop-color="#757575"/>
+              </linearGradient>
+              <filter id="glowGame" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="shadowGame" x="-10%" y="-10%" width="130%" height="130%">
+                <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#5c4033" flood-opacity="0.15"/>
+              </filter>
+            </defs>
+
+            <rect x="0" y="0" width="800" height="380" fill="url(#wallGradGame)"/>
+            <rect x="0" y="380" width="800" height="120" fill="url(#woodFloorGame)"/>
+            <ellipse cx="400" cy="0" rx="400" ry="300" fill="#ffeb3b" opacity="0.05" pointer-events="none"/>
+
+            <g filter="url(#shadowGame)">
+              <rect x="40" y="260" width="380" height="140" rx="6" fill="url(#counterWoodGame)"/>
+              <rect x="30" y="245" width="400" height="15" rx="4" fill="#bcaaa4"/>
+              <rect x="30" y="260" width="400" height="5" fill="#8d6e63"/>
+            </g>
+
+            <g transform="translate(100, 245)" filter="url(#shadowGame)">
+              <path d="M0,0 L-10,-40 L25,-40 L15,0 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+              <path d="M-5,-15 L-8,-30 L23,-30 L20,-15 Z" fill="#a1887f"/>
+              <ellipse cx="7.5" cy="-40" rx="18" ry="5" fill="#616161"/>
+              <rect x="-10.5" y="-43" width="36" height="3" rx="1.5" fill="#424242"/>
+              <g transform="translate(40, 10)">
+                <path d="M0,0 L-10,-40 L25,-40 L15,0 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+                <path d="M-5,-15 L-8,-30 L23,-30 L20,-15 Z" fill="#a1887f"/>
+                <ellipse cx="7.5" cy="-40" rx="18" ry="5" fill="#616161"/>
+                <rect x="-10.5" y="-43" width="36" height="3" rx="1.5" fill="#424242"/>
+              </g>
+              <g transform="translate(90, 0) rotate(15)">
+                <path d="M0,0 L-10,-40 L25,-40 L15,0 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+                <path d="M-5,-15 L-8,-30 L23,-30 L20,-15 Z" fill="#a1887f"/>
+                <ellipse cx="7.5" cy="-40" rx="18" ry="5" fill="#616161"/>
+                <rect x="-10.5" y="-43" width="36" height="3" rx="1.5" fill="#424242"/>
+              </g>
+            </g>
+
+            <g transform="translate(240, 135)" filter="url(#shadowGame)">
+              <rect x="0" y="0" width="160" height="110" rx="8" fill="#424242"/>
+              <rect x="10" y="10" width="140" height="90" rx="4" fill="url(#metalGradGame)"/>
+              <rect x="10" y="0" width="140" height="5" fill="#9e9e9e"/>
+              <line x1="20" y1="0" x2="20" y2="-10" stroke="#bdbdbd" stroke-width="2"/>
+              <line x1="140" y1="0" x2="140" y2="-10" stroke="#bdbdbd" stroke-width="2"/>
+              <line x1="20" y1="-10" x2="140" y2="-10" stroke="#bdbdbd" stroke-width="2"/>
+              <rect x="40" y="70" width="20" height="20" fill="#212121"/>
+              <rect x="100" y="70" width="20" height="20" fill="#212121"/>
+              <path d="M50,90 Q50,110 30,120" fill="none" stroke="#212121" stroke-width="6" stroke-linecap="round"/>
+              <path d="M110,90 Q110,110 90,120" fill="none" stroke="#212121" stroke-width="6" stroke-linecap="round"/>
+              <path d="M130,50 Q150,60 140,90" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="80" cy="40" r="14" fill="#ffffff" stroke="#757575" stroke-width="2"/>
+              <circle cx="80" cy="40" r="10" fill="#eceff1"/>
+              <line x1="80" y1="40" x2="85" y2="33" stroke="#d32f2f" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="30" cy="30" r="4" fill="#f44336"/>
+              <circle cx="45" cy="30" r="4" fill="#4caf50"/>
+              <rect x="0" y="105" width="160" height="10" rx="2" fill="#212121"/>
+            </g>
+
+            <g transform="translate(480, 90)" filter="url(#shadowGame)">
+              <rect x="0" y="0" width="130" height="310" rx="25" fill="url(#fridgeGradGame)"/>
+              <rect x="5" y="5" width="120" height="300" rx="20" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+              <line x1="0" y1="90" x2="130" y2="90" stroke="#8bc34a" stroke-width="2" opacity="0.5"/>
+              <rect x="15" y="30" width="8" height="40" rx="4" fill="url(#metalGradGame)" filter="url(#shadowGame)"/>
+              <rect x="15" y="110" width="8" height="70" rx="4" fill="url(#metalGradGame)" filter="url(#shadowGame)"/>
+              <rect x="45" y="15" width="40" height="12" rx="6" fill="url(#metalGradGame)"/>
+              <g transform="translate(80, 140) rotate(-10)">
+                <circle cx="0" cy="0" r="15" fill="#ffffff" filter="url(#shadowGame)"/>
+                <path d="M-6,-4 L6,-4 L4,6 L-4,6 Z" fill="#6d4c41"/>
+                <path d="M6,-4 Q10,1 6,4" fill="none" stroke="#4e342e" stroke-width="1.5"/>
+              </g>
+              <g transform="translate(60, 200) rotate(20)">
+                <ellipse cx="0" cy="0" rx="12" ry="16" fill="#8d6e63" filter="url(#shadowGame)"/>
+                <path d="M-3,-12 Q6,0 -3,12" fill="none" stroke="#3e2723" stroke-width="1.5"/>
+              </g>
+              <g transform="translate(90, 240) rotate(35)">
+                <path d="M0,0 Q12,-12 16,0 Q12,12 0,0 Z" fill="#81c784" stroke="#ffffff" stroke-width="1.5" filter="url(#shadowGame)"/>
+              </g>
+            </g>
+
+            <g transform="translate(650, 280)" filter="url(#shadowGame)">
+              <path d="M10,0 L70,0 L80,120 L0,120 Z" fill="#4caf50"/>
+              <path d="M0,0 L80,0 L78,15 L2,15 Z" fill="#388e3c"/>
+              <rect x="-5" y="-10" width="90" height="10" rx="3" fill="#2e7d32"/>
+              <g transform="translate(40, 50) scale(0.5)">
+                <path d="M0,-25 L20,10 L-20,10 Z" fill="none" stroke="#c8e6c9" stroke-width="6" stroke-linejoin="round"/>
+                <path d="M-20,10 L0,45 L20,10" fill="none" stroke="#c8e6c9" stroke-width="6" stroke-linejoin="round"/>
+              </g>
+            </g>
+
+            <g transform="translate(400, 0)">
+              <line x1="-80" y1="0" x2="-80" y2="40" stroke="#5d4037" stroke-width="3"/>
+              <line x1="80" y1="0" x2="80" y2="40" stroke="#5d4037" stroke-width="3"/>
+              <g filter="url(#shadowGame)">
+                <rect x="-120" y="40" width="240" height="60" rx="8" fill="url(#counterWoodGame)"/>
+                <rect x="-110" y="48" width="220" height="44" rx="4" fill="#fff8e1"/>
+                <!-- 特製互動指引文字 -->
+                <text x="0" y="76" font-family="sans-serif" font-size="20" font-weight="bold" fill="#4e342e" text-anchor="middle">點擊找出 6 個碳排</text>
+              </g>
+            </g>
+
+            <g transform="translate(140, 0)">
+              <line x1="0" y1="0" x2="0" y2="100" stroke="#424242" stroke-width="2"/>
+              <circle cx="0" cy="0" r="10" fill="#424242"/>
+              <path d="M-20,100 L20,100 L30,120 L-30,120 Z" fill="#424242"/>
+              <circle cx="0" cy="125" r="12" fill="#ffca28" filter="url(#glowGame)"/>
+              <circle cx="0" cy="125" r="6" fill="#fff9c4"/>
+            </g>
+
+            <g transform="translate(680, 0)">
+              <line x1="0" y1="0" x2="0" y2="70" stroke="#424242" stroke-width="2"/>
+              <circle cx="0" cy="0" r="10" fill="#424242"/>
+              <path d="M-20,70 L20,70 L30,90 L-30,90 Z" fill="#424242"/>
+              <circle cx="0" cy="95" r="12" fill="#ffca28" filter="url(#glowGame)"/>
+              <circle cx="0" cy="95" r="6" fill="#fff9c4"/>
+            </g>
+          </svg>
+
+          <!-- 互動點擊區塊 (精準覆蓋在 SVG 上的隱形 hitbox 與實體按鈕，保留 JS 互動功能) -->
+          <div class="game-item" data-id="machine" style="position: absolute; left: 30%; top: 27%; width: 20%; height: 26%; border-radius: 12px; z-index: 10;"></div>
+          <div class="game-item" data-id="fridge" style="position: absolute; left: 60%; top: 18%; width: 17%; height: 62%; border-radius: 20px; z-index: 10;"></div>
+          <div class="game-item" data-id="cups" style="position: absolute; left: 10%; top: 40%; width: 18%; height: 14%; border-radius: 8px; z-index: 10;"></div>
+          <div class="game-item" data-id="light" style="position: absolute; left: 13%; top: 15%; width: 10%; height: 15%; border-radius: 50%; z-index: 10;"></div>
+          
+          <!-- 保留給間接碳排的兩個具象化小方塊 -->
+          <div class="game-item" data-id="delivery" style="position: absolute; left: 5%; bottom: 6%; width: 14%; height: 12%; background: #d2b187; border-radius: 12px; display: grid; place-items: center; color: #4a4039; font-weight: 700; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-size: 1.1rem; cursor: pointer;">配送</div>
+          <div class="game-item" data-id="commute" style="position: absolute; left: 22%; bottom: 6%; width: 14%; height: 12%; background: #8aa0b2; border-radius: 12px; color: white; display: grid; place-items: center; font-weight: 700; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-size: 1.1rem; cursor: pointer;">通勤</div>
+        </div>
+
+        <div class="info-box" id="findInfoBox">
+          <!-- 2. 進度條顯示邏輯：具體的進度文字與視覺增長條 -->
+          <div style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 8px; color: #4e342e;">
+            <span>已探索 <span id="foundCount">0</span> / 總共 6 個知識點</span>
+            <span id="findProgressText">0%</span>
+          </div>
+          <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+            <div id="findProgress" style="width: 0%; height: 100%; background-color: #8bc34a; transition: width 0.4s ease;"></div>
+          </div>
+          <div id="findInfo" class="summary-box">請先點選場景中的物件，找出主要碳排來源。</div>
+          <div style="height:12px"></div>
+          <button class="btn btn-secondary" onclick="resetFindGame()">重新開始</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 自動同步與解鎖：預設隱藏，達到 100% 才顯示 -->
+    <div class="hero-actions" id="nextLevelAction" style="display: none;">
+      <a class="btn btn-primary" href="carbon-basics.html">進入下一關：分類挑戰</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用 chatGPT 工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
