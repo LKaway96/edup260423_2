@@ -54,8 +54,8 @@
 
     <div class="card reveal">
       <div class="section-title">
-        <h2>互動挑戰 1：找碳排</h2>
-        <p>在咖啡廳場景中找出 6 個主要碳排來源</p>
+        <h2>互動挑戰 1：找碳排 (在場景中找出 7 個主要碳排來源)</h2>
+        <p>在場景中找出 7 個主要碳排來源</p>
       </div>
 
       <div class="game-panel">
@@ -107,10 +107,35 @@
             <rect x="0" y="380" width="800" height="120" fill="url(#woodFloorGame)"/>
             <ellipse cx="400" cy="0" rx="400" ry="300" fill="#ffeb3b" opacity="0.05" pointer-events="none"/>
 
+            <!-- 吧台與獨立工作台佈局 (去擁擠化) -->
             <g filter="url(#shadowGame)">
-              <rect x="40" y="260" width="380" height="140" rx="6" fill="url(#counterWoodGame)"/>
-              <rect x="30" y="245" width="400" height="15" rx="4" fill="#bcaaa4"/>
-              <rect x="30" y="260" width="400" height="5" fill="#8d6e63"/>
+              <!-- 左側主吧台 -->
+              <rect x="40" y="260" width="300" height="140" rx="6" fill="url(#counterWoodGame)"/>
+              <rect x="30" y="245" width="320" height="15" rx="4" fill="#bcaaa4"/>
+              <rect x="30" y="260" width="320" height="5" fill="#8d6e63"/>
+              
+              <!-- 右側咖啡機專屬小桌 -->
+              <rect x="360" y="260" width="180" height="140" rx="6" fill="url(#counterWoodGame)"/>
+              <rect x="350" y="245" width="200" height="15" rx="4" fill="#bcaaa4"/>
+              <rect x="350" y="260" width="200" height="5" fill="#8d6e63"/>
+            </g>
+
+            <!-- 冷氣機 (新增的碳排知識點) -->
+            <!-- BUG 修復：移至天花板最左側避開招牌，放大 1.5 倍符合真實電器比例 -->
+            <g transform="translate(30, 15) scale(1.5)" filter="url(#shadowGame)">
+              <!-- 冰箱同款薄荷綠外殼 -->
+              <rect x="0" y="0" width="120" height="35" rx="8" fill="url(#fridgeGradGame)"/>
+              <!-- 3D 邊緣反光 -->
+              <rect x="3" y="3" width="114" height="29" rx="6" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+              <!-- 極簡出風口線條 -->
+              <line x1="15" y1="22" x2="105" y2="22" stroke="#8bc34a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              <line x1="15" y1="27" x2="105" y2="27" stroke="#8bc34a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              <!-- 圓形小指示燈 (綠色) -->
+              <circle cx="105" cy="12" r="2.5" fill="#4caf50"/>
+              <!-- 氣流裝飾 -->
+              <path d="M 30,40 Q 25,50 30,60" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              <path d="M 60,45 Q 55,55 60,65" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              <path d="M 90,40 Q 85,50 90,60" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
             </g>
 
             <g transform="translate(100, 245)" filter="url(#shadowGame)">
@@ -132,7 +157,8 @@
               </g>
             </g>
 
-            <g transform="translate(240, 135)" filter="url(#shadowGame)">
+            <!-- 專業義式咖啡機 -->
+            <g transform="translate(370, 135)" filter="url(#shadowGame)">
               <rect x="0" y="0" width="160" height="110" rx="8" fill="#424242"/>
               <rect x="10" y="10" width="140" height="90" rx="4" fill="url(#metalGradGame)"/>
               <rect x="10" y="0" width="140" height="5" fill="#9e9e9e"/>
@@ -152,7 +178,8 @@
               <rect x="0" y="105" width="160" height="10" rx="2" fill="#212121"/>
             </g>
 
-            <g transform="translate(480, 90)" filter="url(#shadowGame)">
+            <!-- 復古冰箱 (移至場景最右側) -->
+            <g transform="translate(640, 90)" filter="url(#shadowGame)">
               <rect x="0" y="0" width="130" height="310" rx="25" fill="url(#fridgeGradGame)"/>
               <rect x="5" y="5" width="120" height="300" rx="20" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
               <line x1="0" y1="90" x2="130" y2="90" stroke="#8bc34a" stroke-width="2" opacity="0.5"/>
@@ -173,7 +200,8 @@
               </g>
             </g>
 
-            <g transform="translate(650, 280)" filter="url(#shadowGame)">
+            <!-- 垃圾分類箱 (縮小並移至咖啡機與冰箱之間) -->
+            <g transform="translate(560, 280) scale(0.8)" filter="url(#shadowGame)">
               <path d="M10,0 L70,0 L80,120 L0,120 Z" fill="#4caf50"/>
               <path d="M0,0 L80,0 L78,15 L2,15 Z" fill="#388e3c"/>
               <rect x="-5" y="-10" width="90" height="10" rx="3" fill="#2e7d32"/>
@@ -190,11 +218,12 @@
                 <rect x="-120" y="40" width="240" height="60" rx="8" fill="url(#counterWoodGame)"/>
                 <rect x="-110" y="48" width="220" height="44" rx="4" fill="#fff8e1"/>
                 <!-- 特製互動指引文字 -->
-                <text x="0" y="76" font-family="sans-serif" font-size="20" font-weight="bold" fill="#4e342e" text-anchor="middle">點擊找出 6 個碳排</text>
+                <text x="0" y="76" font-family="sans-serif" font-size="20" font-weight="bold" fill="#4e342e" text-anchor="middle">點擊找出 7 個碳排</text>
               </g>
             </g>
 
-            <g transform="translate(140, 0)">
+            <!-- 左吊燈 (移至招牌左側) -->
+            <g transform="translate(245, 0)">
               <line x1="0" y1="0" x2="0" y2="100" stroke="#424242" stroke-width="2"/>
               <circle cx="0" cy="0" r="10" fill="#424242"/>
               <path d="M-20,100 L20,100 L30,120 L-30,120 Z" fill="#424242"/>
@@ -202,7 +231,8 @@
               <circle cx="0" cy="125" r="6" fill="#fff9c4"/>
             </g>
 
-            <g transform="translate(680, 0)">
+            <!-- 右吊燈 (移至招牌右側) -->
+            <g transform="translate(555, 0)">
               <line x1="0" y1="0" x2="0" y2="70" stroke="#424242" stroke-width="2"/>
               <circle cx="0" cy="0" r="10" fill="#424242"/>
               <path d="M-20,70 L20,70 L30,90 L-30,90 Z" fill="#424242"/>
@@ -212,10 +242,14 @@
           </svg>
 
           <!-- 互動點擊區塊 (精準覆蓋在 SVG 上的隱形 hitbox 與實體按鈕，保留 JS 互動功能) -->
-          <div class="game-item" data-id="machine" style="position: absolute; left: 30%; top: 27%; width: 20%; height: 26%; border-radius: 12px; z-index: 10;"></div>
-          <div class="game-item" data-id="fridge" style="position: absolute; left: 60%; top: 18%; width: 17%; height: 62%; border-radius: 20px; z-index: 10;"></div>
-          <div class="game-item" data-id="cups" style="position: absolute; left: 10%; top: 40%; width: 18%; height: 14%; border-radius: 8px; z-index: 10;"></div>
-          <div class="game-item" data-id="light" style="position: absolute; left: 13%; top: 15%; width: 10%; height: 15%; border-radius: 50%; z-index: 10;"></div>
+          <div class="game-item" data-id="machine" style="position: absolute; left: 46.25%; top: 27%; width: 20%; height: 22%; border-radius: 12px; z-index: 10; cursor: pointer;"></div>
+          <!-- BUG 修復：將 y 軸向下調整至 19.5%，扣除陰影偏移，完美對齊冰箱圖示 -->
+          <div class="game-item" data-id="fridge" style="position: absolute; left: 80%; top: 19.5%; width: 16.25%; height: 60.5%; border-radius: 20px; z-index: 10; cursor: pointer;"></div>
+          <div class="game-item" data-id="cups" style="position: absolute; left: 11%; top: 40%; width: 14%; height: 10%; border-radius: 8px; z-index: 10; cursor: pointer;"></div>
+          <div class="game-item" data-id="light" style="position: absolute; left: 28%; top: 18%; width: 5%; height: 10%; border-radius: 50%; z-index: 10; cursor: pointer;"></div>
+          <div class="game-item" data-id="light" style="position: absolute; left: 66.8%; top: 12%; width: 5%; height: 10%; border-radius: 50%; z-index: 10; cursor: pointer;"></div>
+          <!-- 視覺反饋 BUG 修復：重新計算高亮框尺寸，使其完美包圍 1.5 倍冷氣機與下方氣流，並預留呼吸邊距 -->
+          <div class="game-item" data-id="ac" style="position: absolute; left: 3.5%; top: 10%; width: 23.5%; height: 13%; border-radius: 14px; z-index: 10; cursor: pointer;"></div>
           
           <!-- 保留給間接碳排的兩個具象化小方塊 -->
           <div class="game-item" data-id="delivery" style="position: absolute; left: 5%; bottom: 6%; width: 14%; height: 12%; background: #d2b187; border-radius: 12px; display: grid; place-items: center; color: #4a4039; font-weight: 700; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.15); font-size: 1.1rem; cursor: pointer;">配送</div>
@@ -225,7 +259,7 @@
         <div class="info-box" id="findInfoBox">
           <!-- 2. 進度條顯示邏輯：具體的進度文字與視覺增長條 -->
           <div style="display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 8px; color: #4e342e;">
-            <span>已探索 <span id="foundCount">0</span> / 總共 6 個知識點</span>
+            <span>已探索 <span id="foundCount">0</span> / 總共 7 個知識點</span>
             <span id="findProgressText">0%</span>
           </div>
           <div style="width: 100%; height: 8px; background-color: #e0e0e0; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
