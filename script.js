@@ -73,7 +73,8 @@ const carbonInfo = {
   cups:'外帶杯與包材：一次性用品看起來小，但在大量銷售下會累積可觀的碳排。',
   light:'照明：長時間營業的店家若照明配置不佳，也會增加不必要的能耗。',
   delivery:'原料配送：原料從供應商送到店裡，物流與運輸距離都會影響碳排。',
-  commute:'員工通勤：員工每天上下班的交通方式，例如開車、騎車或搭乘大眾運輸，也屬於容易被忽略的間接碳排。'
+  commute:'員工通勤：員工每天上下班的交通方式，例如開車、騎車或搭乘大眾運輸，也屬於容易被忽略的間接碳排。',
+  ac:'冷氣空調：長時間運轉的冷氣是門市耗電大宗，定期清洗濾網與設定適當溫度能有效減碳。'
 };
 
 function initFindGame(){
@@ -92,27 +93,44 @@ function initFindGame(){
   const countEl = document.getElementById('foundCount');
   const infoEl = document.getElementById('findInfo');
   const barEl = document.getElementById('findProgress');
+  const TOTAL_POINTS = Object.keys(carbonInfo).length; // 自動對應為 7
 
-  function render(){
+  function render(isJustClickedLastItem = false){
     if(countEl) countEl.textContent = found.size;
     if(barEl) {
-      const pct = Math.floor((found.size / 6) * 100);
+      const pct = Math.floor((found.size / TOTAL_POINTS) * 100);
       barEl.style.width = pct + '%';
     }
     progress.foundCount = found.size;
     progress.foundItems = Array.from(found); // Set 無法直接轉 JSON，轉為 Array 儲存
 
-    if(found.size >= 6) {
-      progress.findCarbonDone = true;
-      saveProgress(progress);
-      if(infoEl && !infoEl.innerHTML.includes('恭喜完成第一關')) {
-        infoEl.innerHTML = '恭喜完成第一關！你已經找出店內主要碳排熱點，也注意到像員工通勤這樣的間接碳排來源，接下來可以進一步學習如何分類與改善。';
+    if(found.size >= TOTAL_POINTS) {
+      // 如果已經點擊了完成按鈕 (findCarbonDone = true)，才顯示最終結算文字
+      if (progress.findCarbonDone) {
+        if(infoEl) {
+          infoEl.innerHTML = '🎉 恭喜完成第一關！你已經找出店內主要碳排熱點，也注意到像員工通勤這樣的間接碳排來源，接下來可以進一步學習如何分類與改善。';
+        }
+        const nextActionEl = document.getElementById('nextLevelAction');
+        if(nextActionEl) nextActionEl.style.display = 'block';
+        updateGlobalProgress();
+      } 
+      // 防呆：如果是重整頁面且還沒按完成按鈕，補上一個完成按鈕讓他點擊
+      else if (!isJustClickedLastItem) {
+        if(infoEl && !infoEl.innerHTML.includes('查看結果')) {
+          infoEl.innerHTML = '你已找出所有碳排熱點！';
+          const completeBtn = document.createElement('button');
+          completeBtn.className = 'btn btn-primary';
+          completeBtn.style.marginTop = '16px';
+          completeBtn.textContent = '查看結果與完成挑戰';
+          completeBtn.onclick = () => {
+            progress.findCarbonDone = true;
+            saveProgress(progress);
+            render(); // 重新渲染進入最終結算畫面
+          };
+          infoEl.appendChild(document.createElement('br'));
+          infoEl.appendChild(completeBtn);
+        }
       }
-      // [修正 1. 單元跳轉按鈕] 完成後顯示按鈕
-      const nextActionEl = document.getElementById('nextLevelAction');
-      if(nextActionEl) nextActionEl.style.display = 'block';
-      updateGlobalProgress();
-    }else{
       saveProgress(progress);
     }
   }
@@ -128,8 +146,28 @@ function initFindGame(){
 
       found.add(id);
       item.classList.add('found');
-      infoEl.innerHTML = carbonInfo[id];
-      render();
+      
+      // 先嚴格寫入該物件的專屬回饋文字，保證不被覆蓋
+      infoEl.innerHTML = carbonInfo[id]; 
+
+      // 如果這是最後一個物件，在回饋文字下方加入手動觸發跳轉的按鈕
+      if (found.size >= TOTAL_POINTS) {
+        const completeBtn = document.createElement('button');
+        completeBtn.className = 'btn btn-primary';
+        completeBtn.style.marginTop = '16px';
+        completeBtn.textContent = '查看結果與完成挑戰';
+        completeBtn.onclick = () => {
+          progress.findCarbonDone = true;
+          saveProgress(progress);
+          render(); // 按下後才觸發真正的結束跳轉與恭喜文字
+        };
+        infoEl.appendChild(document.createElement('br'));
+        infoEl.appendChild(completeBtn);
+        
+        render(true); // 傳入 true 防止 render 函數內部再次覆寫剛寫好的回饋文字
+      } else {
+        render(); // 非最後一個物件，正常渲染
+      }
     });
   });
 
