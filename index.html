@@ -101,12 +101,34 @@
           <!-- 環境氛圍暖光 -->
           <ellipse cx="400" cy="0" rx="400" ry="300" fill="#ffeb3b" opacity="0.05" pointer-events="none"/>
 
-          <!-- 吧台櫃檯 (左側棕色區塊) -->
+          <!-- 吧台與獨立工作台佈局 (去擁擠化) -->
           <g filter="url(#shadow)">
-            <rect x="40" y="260" width="380" height="140" rx="6" fill="url(#counterWood)"/>
-            <!-- 吧台桌面 -->
-            <rect x="30" y="245" width="400" height="15" rx="4" fill="#bcaaa4"/>
-            <rect x="30" y="260" width="400" height="5" fill="#8d6e63"/>
+            <!-- 左側主吧台 -->
+            <rect x="40" y="260" width="300" height="140" rx="6" fill="url(#counterWood)"/>
+            <rect x="30" y="245" width="320" height="15" rx="4" fill="#bcaaa4"/>
+            <rect x="30" y="260" width="320" height="5" fill="#8d6e63"/>
+            
+            <!-- 右側咖啡機專屬小桌 -->
+            <rect x="360" y="260" width="180" height="140" rx="6" fill="url(#counterWood)"/>
+            <rect x="350" y="245" width="200" height="15" rx="4" fill="#bcaaa4"/>
+            <rect x="350" y="260" width="200" height="5" fill="#8d6e63"/>
+          </g>
+
+          <!-- 冷氣機 (新增的碳排知識點) -->
+          <g transform="translate(30, 15) scale(1.5)" filter="url(#shadow)">
+            <!-- 冰箱同款薄荷綠外殼 -->
+            <rect x="0" y="0" width="120" height="35" rx="8" fill="url(#fridgeGrad)"/>
+            <!-- 3D 邊緣反光 -->
+            <rect x="3" y="3" width="114" height="29" rx="6" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+            <!-- 極簡出風口線條 -->
+            <line x1="15" y1="22" x2="105" y2="22" stroke="#8bc34a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <line x1="15" y1="27" x2="105" y2="27" stroke="#8bc34a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <!-- 圓形小指示燈 (綠色) -->
+            <circle cx="105" cy="12" r="2.5" fill="#4caf50"/>
+            <!-- 氣流裝飾 (讓它更生動) -->
+            <path d="M 30,40 Q 25,50 30,60" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M 60,45 Q 55,55 60,65" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M 90,40 Q 85,50 90,60" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
           </g>
 
           <!-- 疊放的紙杯 (原吧台白色橢圓) -->
@@ -135,8 +157,8 @@
             </g>
           </g>
 
-          <!-- 專業義式咖啡機 (原右側深灰色方塊) -->
-          <g transform="translate(240, 135)" filter="url(#shadow)">
+          <!-- 專業義式咖啡機 -->
+          <g transform="translate(370, 135)" filter="url(#shadow)">
             <!-- 機身後座 -->
             <rect x="0" y="0" width="160" height="110" rx="8" fill="#424242"/>
             <!-- 金屬前面板 -->
@@ -165,8 +187,8 @@
             <rect x="0" y="105" width="160" height="10" rx="2" fill="#212121"/>
           </g>
 
-          <!-- 復古 Smeg 風格冰箱 (原淺藍色長方塊) -->
-          <g transform="translate(480, 90)" filter="url(#shadow)">
+          <!-- 復古冰箱 (移至場景最右側) -->
+          <g transform="translate(640, 90)" filter="url(#shadow)">
             <!-- 冰箱主體 -->
             <rect x="0" y="0" width="130" height="310" rx="25" fill="url(#fridgeGrad)"/>
             <!-- 3D 邊緣反光 -->
@@ -196,8 +218,8 @@
             </g>
           </g>
 
-          <!-- 綠色垃圾分類箱 (原綠色圓角方塊) -->
-          <g transform="translate(650, 280)" filter="url(#shadow)">
+          <!-- 垃圾分類箱 (縮小並移至咖啡機與冰箱之間) -->
+          <g transform="translate(560, 280) scale(0.8)" filter="url(#shadow)">
             <!-- 桶身 -->
             <path d="M10,0 L70,0 L80,120 L0,120 Z" fill="#4caf50"/>
             <path d="M0,0 L80,0 L78,15 L2,15 Z" fill="#388e3c"/>
@@ -226,9 +248,8 @@
             </g>
           </g>
 
-          <!-- 溫暖吊燈 (原頂部黃色圓點) -->
           <!-- 左吊燈 -->
-          <g transform="translate(140, 0)">
+          <g transform="translate(245, 0)">
             <!-- 電線與天花板底座 -->
             <line x1="0" y1="0" x2="0" y2="100" stroke="#424242" stroke-width="2"/>
             <circle cx="0" cy="0" r="10" fill="#424242"/>
@@ -240,7 +261,7 @@
           </g>
 
           <!-- 右吊燈 -->
-          <g transform="translate(680, 0)">
+          <g transform="translate(555, 0)">
             <line x1="0" y1="0" x2="0" y2="70" stroke="#424242" stroke-width="2"/>
             <circle cx="0" cy="0" r="10" fill="#424242"/>
             <path d="M-20,70 L20,70 L30,90 L-30,90 Z" fill="#424242"/>
